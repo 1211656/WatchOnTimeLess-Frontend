@@ -1,0 +1,35 @@
+.input-wrapper {
+    justify-content: center;
+    position: relative;
+    font-family: 'Courier New', monospace;
+}
+
+
+  .hide-cursor::after {
+    display: none;
+  }
+  
+  .input-wrapper::after {
+    content: '|';
+    font-size: xx-large;
+    position: absolute;
+    left: calc( var(--cursor-pos));
+    animation: blink 1s infinite;
+    
+  }
+  
+  @keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  input {
+    border: none;
+    outline: none;
+    font-family: 'Courier New', monospace; /* Adicione esta linha */
+  }
+
+  .custom-cursor {
+    caret-color: transparent;
+  }

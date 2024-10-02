@@ -1,0 +1,11 @@
+.centerLeft {
+    position: absolute;
+    left: 330px;
+}
+
+.centerRightPhoto {
+    position: absolute;
+    right: 330px;
+    
+}
+

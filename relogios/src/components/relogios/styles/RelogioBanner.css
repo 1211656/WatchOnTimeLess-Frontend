@@ -1,0 +1,31 @@
+@keyframes stretch2{
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 40px;
+  }
+}
+
+.vistaRapida {
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  width: 239px;
+  height: 40px;
+  animation: stretch2 0.4s forwards ;
+}
+.zoom{
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.03);
+}
+
+.heartFavoriteWatch {
+  position: relative;
+  left: 80px;
+  top:10px;
+  
+}

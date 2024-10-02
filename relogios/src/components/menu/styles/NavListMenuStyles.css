@@ -1,0 +1,96 @@
+
+
+.myDiv {
+    transform: translateY(50%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .myDiv.active {
+    transform: translateY(0);
+  }
+
+
+
+  .centerHorizontally {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    
+  }
+
+.centerRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 11px;
+  }
+
+.topLeft {
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.lupaPositioning 
+{
+  position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 36px;
+    margin-right: 260px;
+}
+
+.leftPositioningMenu {
+  position: absolute;
+  top:0;
+  left: 0;
+  margin-top: 10px;
+  margin-left: 118px;
+  
+}
+
+.leftPositioningMenu2 {
+  position: absolute;
+  top:0;
+  left: 0;
+  margin-top: 10px;
+  margin-left: 0px;
+  
+}
+
+.ajusteBorderMenuColor {
+  position: absolute;
+  top:0;
+  left: 0;
+  margin-top: 0px;
+  margin-left: 280px;
+}
+.ajusteBorderMenuColor2 {
+  position: absolute;
+  top:0;
+  left: 0;
+  margin-top: 0px;
+  margin-left: 122px;
+}
+
+@keyframes stretch {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+  
+}
+
+.animacaoSearchBar {
+  animation: stretch 0.3s forwards;
+  
+}
+
+
