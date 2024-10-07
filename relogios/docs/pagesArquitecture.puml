@@ -1,0 +1,64 @@
+@startuml
+
+package pages {
+    component Home 
+    component Register
+    component Login
+    component RegisterLogin
+    component WatchProfile
+    component Payment
+    component DetailedWatchDescription
+    component CheckYourOrder
+    component SpecialOffers
+    component ResetYourPassword
+    component WatchListing
+}
+
+package shared {
+    component MainMenu
+    component Basket
+    component Rodape
+    component Warranty
+    component InfoAboutBrand
+    component Delivery
+    component Brands
+    component Contact
+    component GeneralCondition
+    component Favorites
+}
+
+shared --> pages : shared
+
+
+Home <-down-- RegisterLogin 
+MainMenu <-down-- Basket
+Rodape <-down-- GeneralCondition
+Home <-down-- WatchListing
+WatchListing <-down-- WatchProfile
+SpecialOffers <-down-- WatchProfile
+MainMenu <-down-- Brands
+WatchProfile <-down-- DetailedWatchDescription
+MainMenu <-down-- Warranty
+MainMenu <-down-- InfoAboutBrand
+Rodape <-down-- Contact
+Rodape <-down-- Delivery
+Home <-down-- SpecialOffers
+MainMenu <-down-- Favorites
+
+
+RegisterLogin <-down--- Login
+RegisterLogin <-down- Register
+
+
+Login <-right-- ResetYourPassword
+
+Basket <-down-- CheckYourOrder
+
+CheckYourOrder <-down- Payment
+
+
+
+
+
+
+@enduml
