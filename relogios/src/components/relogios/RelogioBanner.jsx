@@ -41,7 +41,7 @@ export default function ({listaRel}) {
                                     
                             <div className='flex flex-col relative  bg-white   '>
                                 <button className='z-10  p-2   '>
-                                    <img className='zoom ' src={relogio.album[0]} alt={relogio.marca} style={{height: 300, width:300}} />
+                                    <img className='zoom ' src={relogio.album.album1[0]} alt={relogio.marca} style={{height: 300, width:300}} />
                                 </button>
 
                                 <button className='z-20  flex justify-center ' style={{ transform: 'translateY(-15px)' }} >
@@ -53,12 +53,13 @@ export default function ({listaRel}) {
                            
                             <div className='mt-2 flex flex-col  w-full '>
                                 <div className='flex  justify-between'>
-                                    <div className=' flex text-sm justify-left uppercase font-gilda font-semibold'>{`${relogio.marca} ${relogio.modelo}`.length > 60 ? `${`${relogio.marca} ${relogio.modelo}`.substring(0, 60)}...` : `${relogio.marca} ${relogio.modelo}`}</div>
+                                    <div className=' flex text-sm justify-left uppercase font-gilda font-semibold'>{`${relogio.marca} ${relogio.modelo}`.length > 60 ? `${`${relogio.marca} ${relogio.modelo}`.substring(0, 60)}...` : `${relogio.brand.name} ${relogio.brand.model.descricao}`}</div>
                                     <button className='text-sm flex justify-end  '>
                                         <CiBookmark className='h-4 w-4'/>
                                     </button>
                                 </div>
-                                <div className='  text-sm  mt-1 mb-1 font-semibold'>{(relogio.preco).toFixed(2).replace('.', ',')} €</div>
+                            
+                                <div className='  text-sm  mt-1 mb-1 font-semibold'>{(relogio.price.price).toFixed(2).replace('.', ',')} €</div>
                             </div>
                         </div>
                         <br></br>

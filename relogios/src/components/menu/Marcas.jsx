@@ -12,9 +12,12 @@ export default function Marcas() {
   useEffect(() => {
     relogioService.listarTodos().then((response) => {
       let listaRel = [];
+      console.log(response.data[0].brand.name);
       for(let i = 0; i < response.data.length; i++){
-        if(response.data[i].marca.toLowerCase() === marca){
+        
+        if(response.data[i].brand.name.toLowerCase() === marca){
           listaRel.push(response.data[i]);
+          
         }
       }
       setListaRelogiosPorMarca(listaRel);
@@ -31,7 +34,7 @@ export default function Marcas() {
     <div className=' bg-fixed overflow-auto ' style={{ backgroundImage: backgroundImage }}>
       <NavListMenu cor={"black"} search={true} iniciarSessao={true}></NavListMenu>
       <div className='mt-64'>
-        <RelogioBanner listaRel= {listaRelogiosPorMarca}/>
+        {listaRelogiosPorMarca && <RelogioBanner listaRel= {listaRelogiosPorMarca}/>}
       </div>
 
       

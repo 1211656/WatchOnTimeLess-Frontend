@@ -6,18 +6,18 @@ export const axiosInstance = axios.create(
 
 export class UsuarioService {
     listarTodos(){
-        return axiosInstance.get('/usuario');
+        return axiosInstance.get('/client');
     }
     excluir(id){
-        return axiosInstance.delete(`/usuario/${id}`);
+        return axiosInstance.delete(`/client/${id}`);
     }
 
     alterar(usuario){
-        axiosInstance.put('/usuario', usuario);
+        axiosInstance.put('/client', usuario);
     }
 
     inserir(usuario){
-        return axiosInstance.post('/usuario', usuario)
+        return axiosInstance.post('/client', usuario)
     }
 
 
