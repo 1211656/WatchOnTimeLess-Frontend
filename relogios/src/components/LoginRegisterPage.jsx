@@ -2,9 +2,11 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import NavListMenu from '../components/menu/NavListMenu';
 import InfoAboutBrand from './InfoAboutBrand';
+
 export default function LoginRegisterPage() {
     const backgroundImage = "url('https://usa.watchpro.com/cloud/2023/09/27/Rolex-Bob-4.jpg')"; 
     const navigate = useNavigate();
+
   return (
     <div>
         <div >
@@ -16,7 +18,7 @@ export default function LoginRegisterPage() {
                     <h1 className='text-xl  font-gilda uppercase '>Desfrute da melhor experiência</h1>
                     <div className='mt-10  mb-64'>
                         <div className='text-sm'>
-                            Inicie sessão para usufruir de uma experiência personalizada e aceder a <br/> todos os nossos serviços.
+                            Inicie sessão para usufruir de uma experiência personalizada e aceder a todos os nossos serviços.
                         </div>
 
                         <button onClick={()=> {navigate("/login")}} className=' border border-black w-full bg-black text-white p-1.5 font-gilda mt-8 hover:opacity-90 uppercase text-sm'>
@@ -36,11 +38,11 @@ export default function LoginRegisterPage() {
         </div>
         </div>
 
-        
         <div className=''>
             
             <InfoAboutBrand ></InfoAboutBrand>
         </div>
     </div>
+    
   )
 }
