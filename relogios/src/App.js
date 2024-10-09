@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, {} from 'react';
+import React, {useEffect} from 'react';
 import MegaMenuWithPlacement from './components/menu/NavListMenu';
 import NavListMenu from './components/menu/NavListMenu';
 import PhotoBanner from './components/PhotoBanner';
-
+import {gapi} from 'gapi-script';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import HomePage from './components/menu/HomePage';
@@ -18,8 +18,20 @@ import RelogioPerfil from './components/relogios/RelogioPerfil';
 import SearchPage from './components/SearchPage';
 import LoginRegisterPage from './components/LoginRegisterPage';
 
+const clientId = "206290008863-u3hac9sdgb777g5gmd1u4bvnv6j2ajcd.apps.googleusercontent.com"
 
 function App() {
+
+  useEffect(()=> {
+    function start() {
+      gapi.client.init({
+        clientId:clientId,
+        scope: ""
+      })
+    }
+    gapi.load('client:auth2',start)
+  })
+
   return (
     <Router className=''>
       <Routes>

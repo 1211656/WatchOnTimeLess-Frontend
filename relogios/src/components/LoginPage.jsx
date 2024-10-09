@@ -6,8 +6,12 @@ import NavListMenu from './menu/NavListMenu';
 import { useNavigate } from 'react-router-dom';
 import { admin } from '../dominio';
 import { UsuarioService } from '../service/UsuarioService';
+import {GoogleLogin} from 'react-google-login';
+
+const clientId = "206290008863-u3hac9sdgb777g5gmd1u4bvnv6j2ajcd.apps.googleusercontent.com";
 
 export default function LoginPage(page2) {
+    
    const navigate = useNavigate();
    const [login, setLogin] = useState('');
    const [password, setPassword] = useState('');
@@ -37,6 +41,15 @@ export default function LoginPage(page2) {
    const handlePasswordInput = (e) => {
        setPassword(e.target.value);
    }
+
+   const onSuccess = (res) => {
+    console.log('Success!' + res.profileObj.email);
+   }
+
+   const onFailure = (res) => {
+    console.log('Failure!', res.error);
+   }
+
    
   return (
     <div>
@@ -72,6 +85,18 @@ export default function LoginPage(page2) {
                     <div className='flex justify-center items-center mt-4'>
                             <button onClick={() => {navigate("/register")}} className='border rounded-xl p-1.5 mt-3 hover:bg-gray-200'>Iniciar Sessão</button>
                     </div>
+                </div>
+
+                <div className='flex justify-center' id='signInButton'>
+                    <GoogleLogin
+                        clientId={clientId}
+                        buttonText="Login com Google"
+                        onSuccess={onSuccess}
+                        onFailure={onFailure}
+                        cookiePolicy={'single_host_origin'}
+                        isSignedIn={true}
+                    />
+                    
                 </div>
         </div>
     </div>
