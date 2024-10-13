@@ -3,7 +3,6 @@ import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import "./styles/PhotoBanner.css";
 
-
 export default function PhotoBanner() {
 
   const images = [
@@ -12,11 +11,8 @@ export default function PhotoBanner() {
     {uri: 'https://www.replicasrelojes.online/modules/ps_imageslider/images/69c165779ec6ff315909d0417700404c20a57228_Envio%20gratis%20replica%20de%20reloj%202024.jpg'},
   ]
 
-  
   const [currentImage, setCurrentImage] = useState(0)
   const [showArrows, setShowArrows] = useState(false)
-
- 
 
   const goLeft = () => {
     if (currentImage === 0) setCurrentImage(images.length - 1)
@@ -36,17 +32,12 @@ export default function PhotoBanner() {
     
       <div onMouseEnter={()=> {setShowArrows(true)}} onMouseLeave={()=> {setShowArrows(false)}} className=' flex items-center  justify-center mt-10   '>
         
-        
-
         <img 
           src={ "https://remove-background.com/assets/bg-13-BqHyNDmi.webp"}
-          className='flex   '
-          
+          className='flex'
           >
         </img>
 
-        
-      
     </div>
   )
 }

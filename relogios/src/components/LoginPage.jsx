@@ -82,9 +82,6 @@ export default function LoginPage(page2) {
                     </div>
 
                 </div>
-                    <div className='flex justify-center items-center mt-4'>
-                            <button onClick={() => {navigate("/register")}} className='border rounded-xl p-1.5 mt-3 hover:bg-gray-200'>Iniciar Sessão</button>
-                    </div>
                 </div>
 
                 <div className='flex justify-center' id='signInButton'>

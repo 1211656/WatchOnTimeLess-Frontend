@@ -141,7 +141,6 @@ export default function RegisterPage() {
                 <FaSquareXmark className='text-red-600 h-7 w-7' />
               )}
             
-
               {passwordCheck ? (
                 <BsCheckSquareFill className='text-green-600 h-6 w-6' />
               ) : (

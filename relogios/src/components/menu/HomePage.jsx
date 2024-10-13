@@ -7,11 +7,9 @@ import InfoAboutBrand from '../InfoAboutBrand';
 import SloganBanner from '../SloganBanner';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 
-
 export default function HomePage() {
   const [showNav, setShowNav] = useState(true);
   const usuarioService = new UsuarioService();
-  
 
   const images = [
     "https://i.ytimg.com/vi/1faeUhDyIUw/maxresdefault.jpg",
@@ -29,18 +27,10 @@ export default function HomePage() {
     })
   }
 
-  
-
-
- 
-
   return (
     <div className='  overflow-auto'>
       
-      
-        
           <NavListMenu search={true} iniciarSessao={true} className=""></NavListMenu>
-        
       
       <ParallaxProvider>
       <div className='overflow-auto'>
